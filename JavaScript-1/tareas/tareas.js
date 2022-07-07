@@ -23,7 +23,7 @@ const nuevaResta = 10 - 5 ===5;
 const nuevaMultiplicacion = 10 * 4 === 40 ;
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === 4.2;
+const nuevoModulo = 21 % 5 === 1;
 
 // ----------------------------------
 
@@ -73,9 +73,12 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (str1.lenght==str2.lenght){
+
+  if(str1.lenght  == str2.lenght ){
     return true;
-  }else{return false}
+  }else{
+    return false;
+  }
 }
 
 function menosQueNoventa(num) {
@@ -83,7 +86,7 @@ function menosQueNoventa(num) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if (num<90){return true;}
-  else {return false}
+  else {return false;}
 }
 
 function mayorQueCincuenta(num) {
@@ -161,8 +164,8 @@ function esPositivo(numero) {
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
   
-  if (numero>0){return "es positivo";}
-  else if (numero<0){return "es negativo";}
+  if (numero>0){return "Es positivo";}
+  else if (numero<0){return "Es negativo";}
   else {return false;}
 }
 
@@ -184,7 +187,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Nahuel" -> "Hola Nahuel!"
   // Tu código:
-  return "Hola "+ nombre;
+  return "Hola "+ nombre +"!";
 
 }
 
@@ -220,10 +223,10 @@ function esVocal(letra) {
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra.lenght>1){ return "dato incorrecto";}
+  if (letra.lenght>1){ return "Dato incorrecto";}
   else if (letra=="a" || letra=="e" || letra=="i" || letra=="o" || letra=="u" ) {
-    return "es vocal";
-  }else {return "no es vocal";}
+    return "Es vocal";
+  }else {return "Dato incorrecto";}
 }
 
 // --------------------------------
