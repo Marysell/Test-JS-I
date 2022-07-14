@@ -36,9 +36,9 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
-  if (idioma== "aleman") {return "Guten tag!";}
+  if (idioma== "aleman") {return "Guten Tag!";}
   else if (idioma== "mandarin") {return "Ni Hao!";}
-  else if (idioma== "ingles") {return "Hello";}
+  else if (idioma== "ingles") {return "Hello!";}
   else  {return "Hola!";}
 
 }
@@ -75,17 +75,16 @@ function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (numero==10) {return "true";}
-  else if (numero==5) {return "true";}
-  else {return "false";}
+  if (numero===10 || numero=== 5) {return true;}
+  else {return false;}
 }
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (numero>20&&numero<50) {return "true";}
-  else {return "false";}
+  if (numero>20&&numero<50) {return true;}
+  else {return false;}
 }
 
 function esEntero(numero) {
@@ -105,9 +104,9 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if (numero%3==0&&numero%5) {return "fizzbuzz";}
-  else if (numero%5) {return "buzz";}
-  else if (numero%3) {return "fizz";}
+  if (numero%3==0&&numero%5==0) {return "fizzbuzz";}
+  else if (numero%5==0) {return "buzz";}
+  else if (numero%3==0) {return "fizz";}
   else {return numero;}
 }
 
@@ -121,7 +120,7 @@ function operadoresLogicos(num1, num2, num3) {
   if (num1>num2 && num1>num3 && num1>0) {return "Número 1 es mayor y positivo";}
   else if (num1<0 || num2<0 || num3<0) {return "Hay negativos";}
   else if (num3>num1 && num3>num2) {return num3+1;}
-  else if (num1==0 || num2==0 || num3==0) {return "Error";}
+  else if (num1===0 || num2===0 || num3===0) {return "Error";}
   else {return false;}
 }
 
@@ -136,7 +135,7 @@ function esVerdadero(valor) {
 function tieneTresDigitos(numero) {
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-if (numero.toString().length()==3) {return true;}
+if (toString().length(numero)==3) {return true;}
 else {return false;}
 }
 
@@ -147,31 +146,32 @@ function esPrimo(numero) {
   // De lo contrario devuelve "falso"
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
-  // Nota: Los números 0 y 1 NO son considerados números primos
-  var salida = true;
-  for (var i =2; i<numero; i++) {
-    if (numero%i ===0) {salida = false;}
-  }
-
-  return salida;
+  // Nota: Los números 0 y 1 NO son considerados números primos 
+  for (var i=2; i<numero; i++) {
+if (numero% i===0) { return false;}
+       
 }
+return numero !==1;
+}
+
+
 
 function tablaDelSeis() {
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí 
   var tabla=[];
-  for (var i = 0; i<= 60; i++) { 
+  for (var i=0; i<= 10; i++) { 
     tabla[i]=6*i; 
   } 
-  return tabla.sort; 
+  return tabla; 
 }
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  var salida;
+  var salida=numero;
   var i=0;
   do {
     i = i+1; 
